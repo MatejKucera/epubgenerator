@@ -1,0 +1,38 @@
+body {
+    line-height: 1.5;
+}
+
+body * {
+    line-height: inherit;
+}
+
+.title {
+    adobe-hyphenate: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -epub-hyphens: none;
+    hyphens: none;
+}
+
+.titlePage {
+    text-align: center;
+}
+
+.titlePage title {
+    margin-top:40px;
+    margin-bottom: 20px;
+}
+
+.chapterPage p {
+     -webkit-hyphenate-limit-before: 3;
+     -webkit-hyphenate-limit-after: 2;
+     -ms-hyphenate-limit-chars: 6 3 2;
+     hyphenate-limit-chars: 6 3 2;
+     -webkit-hyphenate-limit-lines: 2;
+     hyphenate-limit-lines: 2;
+}
+
+.navPage {
+
+}

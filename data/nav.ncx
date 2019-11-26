@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ncx:ncx version="2005-1" xml:lang="en" xmlns:ncx="http://www.daisy.org/z3986/2005/ncx/">
+
+    <ncx:head>
+
+        <ncx:meta name="dtb:uid" content="%ID%" />
+        <ncx:meta name="dtb:depth" content="2"/>
+        <ncx:meta name="dtb:totalPageCount" content="0"/>
+        <ncx:meta name="dtb:maxPageNumber" content="0"/>
+
+        <!--<ncx:meta name="cover" content="cover" />-->
+
+    </ncx:head>
+
+    <ncx:docTitle>
+        <ncx:text>%TITLE%</ncx:text>
+    </ncx:docTitle>
+
+    <ncx:docAuthor>
+        <ncx:text>%AUTHOR%</ncx:text>
+    </ncx:docAuthor>
+
+    <ncx:navMap>
+       <!-- <ncx:navPoint class="book" id="uuid-832f987e-6829-455d-9764-8b811fc3ee25" playOrder="1">
+            <ncx:navLabel>
+                <ncx:text>Title Page</ncx:text>
+            </ncx:navLabel>
+            <ncx:content src="832f987e-6829-455d-9764-8b811fc3ee25.xhtml" />
+
+        </ncx:navPoint>-->
+
+        %NAVPOINTS%
+
+
+    </ncx:navMap>
+</ncx:ncx>

@@ -1,0 +1,32 @@
+{
+  "name": "matejkucera/epubgenerator",
+  "description": "Library for generating EPUB files.",
+  "type": "library",
+  "keywords": ["epub","book","ebook"],
+  "homepage": "https://github.com/matejkucera/epubgenerator",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "MatejKucera",
+      "email": "matej.kucera@atlas.cz"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "MatejKucera\\EpubGenerator\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.1",
+    "nelexa/zip": "dev-master",
+    "nesbot/carbon": "^2.0@dev",
+    "phlak/strgen": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7",
+    "php-coveralls/php-coveralls": "2.1.x-dev",
+    "symfony/var-dumper": "^5.1@dev",
+    "joshtronic/php-loremipsum": "dev-master"
+  }
+}

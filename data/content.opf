@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="3.0">
+
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+
+        <dc:identifier id="bookid">%ID%</dc:identifier>
+        <dc:title id="pub-title">%TITLE%</dc:title>
+
+        <dc:language>%LANGUAGE%</dc:language>
+        <dc:date>%DATE%</dc:date>
+
+        <dc:subject>%SUBJECT%</dc:subject>
+        <dc:creator id="author">%AUTHOR%</dc:creator>
+        <dc:publisher>%PUBLISHER%</dc:publisher>
+        <dc:rights>%AUTHOR% %YEAR%. All rights reserved.</dc:rights>
+        <dc:description>%DESCRIPTION%</dc:description>
+
+        <meta property="dcterms:modified">%DATE%</meta>
+        <!--<meta property="file-as" refines="#author">%AUTHOR%</meta>
+        <meta content="cover-image" name="cover"/>-->
+    </metadata>
+
+    <manifest>
+
+        <item href="title.xhtml" id="title" media-type="application/xhtml+xml" />
+        <item href="nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav"/>
+        %MANIFEST%
+
+    </manifest>
+
+
+    <spine>
+        <itemref idref="title" linear="yes"/>
+        <itemref idref="nav" linear="yes"/>
+        %SPINE%
+    </spine>
+
+
+</package>

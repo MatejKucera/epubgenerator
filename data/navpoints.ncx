@@ -1,0 +1,6 @@
+<ncx:navPoint class="book" id="%ID%" playOrder="%ORDER%">
+    <ncx:navLabel>
+        <ncx:text>%LABEL%</ncx:text>
+    </ncx:navLabel>
+    <ncx:content src="%ID%.xhtml" />
+</ncx:navPoint>

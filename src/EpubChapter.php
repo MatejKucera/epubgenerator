@@ -39,7 +39,7 @@ class EpubChapter
     }
 
     public function xhtml() :string {
-        $string = file_get_contents('data/chapter.xhtml');
+        $string = file_get_contents(__DIR__.'/../data/chapter.xhtml');
         $data = [
             'id' => $this->hash,
             'title' => $this->title,
@@ -60,7 +60,7 @@ class EpubChapter
     }
 
     public function navRecord() :string {
-        $string = file_get_contents('data/navrecord.xhtml');
+        $string = file_get_contents(__DIR__.'/../data/navrecord.xhtml');
         $data = [
             'id' => $this->hash,
             'title' => $this->title,

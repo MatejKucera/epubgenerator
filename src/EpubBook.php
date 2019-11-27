@@ -104,7 +104,7 @@ class EpubBook
         $zip->addFromString('mimetype', 'application/epub+zip');
 
         $zip->addEmptyDir('META-INF');
-        $zip->addFile('data/container.xml', 'META-INF/container.xml');
+        $zip->addFile(__DIR__.'/../data/container.xml', 'META-INF/container.xml');
 
         $zip->addEmptyDir('OEBPS');
 
@@ -121,7 +121,7 @@ class EpubBook
         if($this->styles) {
             $zip->addFromString('OEBPS/styles.css', $this->styles);
         } else {
-            $zip->addFile('data/defaultStyles.css', 'OEBPS/styles.css');
+            $zip->addFile(__DIR__.'/../data/defaultStyles.css', 'OEBPS/styles.css');
         }
 
         foreach($this->chapters as $key => $chapter) {
@@ -141,7 +141,7 @@ class EpubBook
             $manifest .= $chapter->manifestRecord()."\n";
         }
 
-        $string = file_get_contents('data/content.opf');
+        $string = file_get_contents(__DIR__.'/../data/content.opf');
         $data = [
             'title' => $this->title,
             'author' => $this->author,
@@ -170,7 +170,7 @@ class EpubBook
             $navrecords .= $chapter->navRecord()."\n";
         }
 
-        $string = file_get_contents('data/nav.xhtml');
+        $string = file_get_contents(__DIR__.'/../data/nav.xhtml');
         $data = [
             'id' => $this->id,
             'title' => $this->title,
@@ -187,7 +187,7 @@ class EpubBook
     }
 
     private function buildTitleXhtml() {
-        $string = file_get_contents('data/title.xhtml');
+        $string = file_get_contents(__DIR__.'/../data/title.xhtml');
         $data = [
             'id' => $this->id,
             'title' => $this->title,

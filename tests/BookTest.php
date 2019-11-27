@@ -28,7 +28,7 @@ final class BookTest extends TestCase
                 ->setHtml($lipsum->paragraphs(rand(10, 100), 'p')));
         }
 
-        $book->saveToFile();
+        $book->saveToFile('output/test.epub');
 
         // TODO implement tests
         $this->assertTrue(true);

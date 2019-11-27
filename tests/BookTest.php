@@ -30,6 +30,9 @@ final class BookTest extends TestCase
 
         $book->saveToFile('output/test.epub');
 
+        $content = $book->content();
+
+
         // TODO implement tests
         $this->assertTrue(true);
 

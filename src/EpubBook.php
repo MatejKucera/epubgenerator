@@ -71,42 +71,27 @@ class EpubBook
         $this->chapters[] = $chapter;
     }
 
+    /**
+     * @param $path
+     * @throws ZipException
+     */
     public function saveToFile($path) {
-        try {
-            $zip = $this->buildZip();
-            $zip->close();
-            $zip->saveAsFile($path);
-
-        }
-        catch (ZipException $exception) {
-            die;
-        }
+        $zip = $this->buildZip();
+        $zip->close();
+        $zip->saveAsFile($path);
     }
 
     public function stream($stream) {
-        try {
-            $zip = $this->buildZip();
-            $zip->close();
-            $zip->saveAsStream($stream);
+        $zip = $this->buildZip();
+        $zip->close();
+        $zip->saveAsStream($stream);
 
-        }
-        catch (ZipException $exception) {
-            die;
-        }
     }
 
     public function content() {
-        try {
-            $zip = $this->buildZip();
-            $zip->close();
-            $content = $zip->outputAsString();
-
-        }
-        catch (ZipException $exception) {
-            die;
-        }
-
-        return $content;
+        $zip = $this->buildZip();
+        $zip->close();
+        return $zip->outputAsString();
     }
 
     /**
